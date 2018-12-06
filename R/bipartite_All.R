@@ -25,7 +25,8 @@ wrapper_bipartite_model7<-function(net_adjacency,net_rating,nclust1,nclust2,thre
   library(Rcpp)
   library(Matrix)
   library(gtools)
-  sourceCpp(file = paste0(file_path,"model_7.cpp"))
+  #sourceCpp(file = paste0(file_path,"model_7.cpp"))
+  library(biSBM)
   #################################################
   ## Defining a function to update variational parameters gamma using quadratic program solver. Input: 
   ## gamma.curr is a N*K matrix for current gamma estimates, pi.curr is a K*1 vector for current pi
@@ -682,7 +683,8 @@ wrapper_bipartite_model8<-function(net_adjacency,net_rating,nclust1,nclust2,thre
   library(Rcpp)
   library(Matrix)
   library(gtools)
-  sourceCpp(file = paste0(file_path,"model_8.cpp"))
+  #sourceCpp(file = paste0(file_path,"model_8.cpp"))
+  library(biSBMcovNoSEM)
   #################################################
   ## Defining a function to update variational parameters gamma using quadratic program solver. Input:
   ## gamma.curr is a N*K matrix for current gamma estimates, pi.curr is a K*1 vector for current pi
@@ -1478,7 +1480,8 @@ wrapper_bipartite_model10<-function(net_adjacency,net_rating,nclust1,nclust2,thr
   library(Rcpp)
   library(Matrix)
   library(gtools)
-  sourceCpp(file = paste0(file_path,"model_10.cpp"))
+  #sourceCpp(file = paste0(file_path,"model_10.cpp"))
+  library(biSBMcovSEM)
   #################################################
   ## Defining a function to update variational parameters gamma using quadratic program solver. Input:
   ## gamma.curr is a N*K matrix for current gamma estimates, pi.curr is a K*1 vector for current pi
@@ -2237,7 +2240,8 @@ wrapper_bipartite_model11<-function(net_adjacency,net_rating,nclust,thres=10^(-6
   library(Rcpp)
   library(Matrix)
   library(gtools)
-  sourceCpp(file = paste0(file_path,"model_11.cpp"))
+  #sourceCpp(file = paste0(file_path,"model_11.cpp"))
+  library(SBMcov)
   #################################################
   ## Defining a function to update variational parameters gamma using quadratic program solver. Input:
   ## gamma.curr is a N*K matrix for current gamma estimates, pi.curr is a K*1 vector for current pi
